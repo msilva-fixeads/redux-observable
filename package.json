@@ -1,7 +1,7 @@
 {
   "name": "redux-observable",
   "version": "0.14.0-changed.0",
-  "description": "RxJS based middleware for Redux. Compose and cancel async actions and more.",
+  "description": "RxJS based middleware for Redux. Compose and cancel async actions and more. Forked from https://github.com/redux-observable/redux-observable",
   "module": "lib/es/index.js",
   "main": "lib/cjs/index.js",
   "scripts": {
@@ -19,9 +19,9 @@
     "shipit": "npm run clean && npm run build && npm run lint && npm test && scripts/preprepublish.sh && npm publish",
     "docs:clean": "rimraf _book",
     "docs:prepare": "gitbook install",
-    "docs:build": "npm run docs:prepare && gitbook build -g redux-observable/redux-observable && cp logo/favicon.ico _book/gitbook/images",
+    "docs:build": "npm run docs:prepare && gitbook build -g msilva-fixeads/redux-observable && cp logo/favicon.ico _book/gitbook/images",
     "docs:watch": "gitbook serve",
-    "docs:publish": "npm run docs:clean && npm run docs:build && cp CNAME _book && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:redux-observable/redux-observable gh-pages --force"
+    "docs:publish": "npm run docs:clean && npm run docs:build && cp CNAME _book && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:msilva-fixeads/redux-observable gh-pages --force"
   },
   "typings": "./index.d.ts",
   "files": [
@@ -33,7 +33,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redux-observable/redux-observable.git"
+    "url": "git+https://github.com/msilva-fixeads/redux-observable.git"
   },
   "keywords": [
     "Rx",
@@ -55,13 +55,17 @@
     {
       "name": "Jay Phelps",
       "email": "hello@jayphelps.com"
+    },
+    {
+      "name": "Miguel Silva",
+      "email": "miguel.moreira.silva@olx.com"
     }
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/redux-observable/redux-observable/issues"
+    "url": "https://github.com/msilva-fixeads/redux-observable/issues"
   },
-  "homepage": "https://github.com/redux-observable/redux-observable#README.md",
+  "homepage": "https://github.com/msilva-fixeads/redux-observable#README.md",
   "peerDependencies": {
     "redux": "3.*",
     "rxjs": "^5.0.0"
