@@ -1,6 +1,7 @@
 {
-  "name": "redux-observable",
-  "version": "0.14.0-changed.0",
+  "name": "redux-observable-msilva-fixeads",
+  "version": "0.14.1",
+  "forkedVersion": "0.14.0",
   "description": "RxJS based middleware for Redux. Compose and cancel async actions and more. Forked from https://github.com/redux-observable/redux-observable",
   "module": "lib/es/index.js",
   "main": "lib/cjs/index.js",
