@@ -26,6 +26,7 @@ export function createEpicMiddleware(epic, options = defaultOptions) {
     new ActionsObservable(input$)
   );
   const epic$ = new Subject();
+  const pendingActions = [];
   let store;
 
   const epicMiddleware = _store => {
@@ -51,8 +52,10 @@ export function createEpicMiddleware(epic, options = defaultOptions) {
       epic$.next(epic);
 
       return action => {
+        pendingActions.push(action);
         const result = next(action);
-        input$.next(action);
+        const nextAction = pendingActions.shift();
+        input$.next(nextAction);
         return result;
       };
     };
